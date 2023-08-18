@@ -264,6 +264,21 @@ To install, run the command: `brew install maven`
 
 You might need to set a default `MVN_HOME` in the *~/.zshrc* and bind it to the `$PATH`
 
+### Protocol Issue
+
+Visit `http://repo.maven.apache.org/`
+
+If it says https required, you need to add this chunk of code to your `settings.xml` inside `<mirrors>`
+
+```
+<mirror>
+  <id>central-secure</id>
+  <url>https://repo.maven.apache.org/maven2</url>
+  <mirrorOf>central</mirrorOf>
+</mirror>
+```
+
+
 # Docker
 
 # OS Productivity
